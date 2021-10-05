@@ -1,0 +1,25 @@
+name: 'Leal AWS EKS - kubectl'
+description: 'GitHub Action for interacting with kubectl (k8s)'
+author: 'Manuel Ramirez <mramirez@leal.co>'
+branding:
+  icon: 'cloud'
+  color: 'yellow'
+inputs:
+  AWS_ACCESS_KEY_ID:
+    description: 'AWS Access Key ID.'
+    required: true
+  AWS_SECRET_ACCESS_KEY:
+    description: 'AWS Secret Access Key.'
+    required: true
+  AWS_SESSION_TOKEN:
+    description: 'AWS Session Token'
+    required: true
+  AWS_DEFAULT_REGION:
+    description: 'AWS Region, e.g. us-east-1'
+    required: true
+  EKS_CLUSTER:
+    description: 'AWS EKS Cluster name'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
